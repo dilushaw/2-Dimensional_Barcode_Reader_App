@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+a.emailLink{
+	color:#000099;
+	text-decoration:underline;
+}
+
+.page_title {
+    text-align: left;
+    width: 700px;
+}
+
+.title {
+    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+}
+.required_fields {
+	/*font-family:Geneva, Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+    /*font-weight: normal;*/
+    margin-top: -11px;
+    text-align: right;
+}
+.req_star{
+	color:#CC0000;
+}
+
+label{
+	color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#Content p{
+	font-size:12px;
+	padding:2px;
+	margin:0;
+}
+
+.ScrollBox {
+    background-color: #FFFFFF;
+    border: 1px solid #7F9DB9;
+    height: 100px;
+    overflow-y: scroll;
+    width: 277px;
+}
+
+table{
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+hr{
+	margin:0;
+	padding:0;
+}

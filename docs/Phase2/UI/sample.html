@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Vertebrate  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100423
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+
+<script>
+
+            // perform JavaScript after the document is scriptable.
+            $(function() {
+                // setup ul.tabs to work as tabs for each div directly under div.panes
+                $("ul.tabs").tabs("div.panes > div");
+            });
+        </script>
+        
+</head>
+<body>
+<div id="wrapper">
+
+  <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <h2 id="BarcodeLogo">Barcode</h2>
+  </div>
+  <!--#End Logos-->
+  
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  <!--End HeaderBar-->
+  
+  <!-- Displaying the tabs menu-->
+  <div class="fillDiv">
+    <ul class="tabs">
+      <li><a href="#">Create BC</a></li>
+      <li><a href="#">Create BC</a></li>
+    </ul>
+  </div>
+  <!-- end fillDiv (tabs menu) -->
+  
+  <div class="panes" style="border: 1px solid #999;border-top: 0;padding:0px 0px">
+    <div id="Content" class="Content"> 
+    <div class="Top"></div>
+
+                        <div id="mid" class="Mid">
+
+                            <table style="width:800px;">
+                                <tr>
+                                    <td style="width:140px;">Barcode Action</td>
+                                    <td>
+
+                                        <SELECT name="BCaction" id = "BCaction"  style="width:137" onchange="Barcode_action()">
+                                            <option value="1" selected="selected" >GoTo Website</option>
+                                            <option value="2" >Message</option>
+                                            <option value="3" >Contact Details</option>
+                                            <option value="4" >Send SMS</option>
+                                            <option value="5" >Initiate Call</option>
+
+                                        </SELECT>
+
+
+                                    </td>
+
+                                </tr>
+                                <tr><td valign="top"><div id="bc" class="internal">
+                                            <div id="BC1" class="internal" style="position:relative;  margin: auto; "><div class="fillDiv">WebSite Address</div></div>
+                                            <div id="BC2" style="display:none;position:relative;  margin: auto; " ><div class="fillDiv">Message</div></div>
+                                            <div id="BC3" style="display:none;position:relative;  margin: auto; " ><div class="fillDiv">Contact Details</div></div>
+                                            <div id="BC4" style="display:none;position:relative;  margin: auto; " ><div class="fillDiv">Phone No.</div></div>
+                                            <div id="BC5" style="display:none;position:relative;  margin: auto; " ><div class="fillDiv">Phone No.</div></div>
+                                        </div>
+
+                                    </td><td>
+
+                                        <div id="bcact" class="internal">
+                                            <div id="ACT1" style="position:relative;  margin: auto; " >
+                                                <div class="fillDiv"><input type="text" id="websiteAddress"></div>
+                                            </div>
+                                            <div id="ACT2" style="display:none;position:relative;  margin: auto; " >
+                                                <!--textarea id="message"></textarea-->
+                                                <div class="fillDiv"><textarea id="message" style="height:100" cols = "50" onKeyDown="limitText('message','msgboxcount','2000');" onKeyUp="limitText('message','msgboxcount','2000');" ></textarea>
+                                                    <br>
+
+                                                    <font size="2" >(You have <input readonly  type="text" id="msgboxcount" size="3" value="2000" style='font-size:10px' /> characters left.)</font>
+                                                </div>
+                                            </div>
+                                            <div id="ACT3" style="display:none;position:relative;  margin: auto; " >
+                                                <div class="fillDiv"><table><tr><td>Name<br><input type="text" id="contactName"></td>
+                                                            <td>Phone<br><input type="text" id="contactPhone"></td>
+                                                        </tr>
+                                                        <tr><td>Email<br><input type="text" id="contactEmail"></td></tr>
+                                                    </table></div>
+
+                                            </div>
+                                            <div id="ACT4" style="display:none;position:relative;  margin: auto; " > <div class="fillDiv">
+
+                                                    <table>
+                                                        <tr><td>77<input type="text" id="sms"></td></tr>
+                                                        <tr><td>Message</td></tr>
+                                                        <tr><td>
+
+                                                                <textarea id="smsmessage" style="height:100" cols = "50" onKeyDown="limitText('smsmessage','smsmsgboxcount','160');" onKeyUp="limitText('smsmessage','msgboxcount','160');" ></textarea>
+                                                                <br>
+                                                                <font size="2" >(You have <input readonly  type="text" id="smsmsgboxcount" size="3" value="160" style='font-size:10px' /> characters left.)</font>
+
+
+
+                                                            </td></tr>
+
+                                                    </table>
+
+                                                </div></div>
+                                            <div id="ACT5" style="display:none;position:relative;  margin: auto; " > <div class="fillDiv">77<input type="text" id="call"></div></div>
+                                        </div>
+                                    </td></tr>
+                            </table>
+                            <hr>
+                            <table style="width:800px;" >
+
+
+                                <tr><td style="width:140px;">Barcode Type</td>
+                                    <td>
+                                        <table><tr>
+                                                <td><input type="radio" name="barCodetype" id="typeQR" value="1" onclick="changeBarcodeTypeLogged()" checked="true" /> QR code</td>
+                                                <td><input type="radio" name="barCodetype" id="typeDM" value="2"onclick="changeBarcodeTypeLogged()"/> DM code</td>
+                                                <td>  <div id="triggers"><div class="fillDiv">
+                                                            <img src="images/help.png" rel="#photo1"  alt="Help" height="15" Title ="QR:The quick respose,DM:Data Matrix" />
+                                                        </div>
+                                                    </div></td>
+                                            </tr></table>
+
+
+                                    </td>
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <td>Barcode size</td>
+                                    <td>
+                                        <SELECT name="barcodeLength" id = "barcodeLength"  style="width:137" onchange="changeWidth()">
+                                            <option value="4" selected>4 cm</option>
+                                            <option value="8" >8 cm</option>
+                                            <option value="12" >12 cm</option>
+                                            <option value="16" >16 cm</option>
+
+                                        </SELECT>
+
+
+                                        <SELECT name="barcodeWidth" id = "barcodeWidth"  style="width:137"  onchange="changeLength()" onselect="changeLength()">
+                                            <option value="4" selected>4 cm</option>
+                                            <option value="8" >8 cm</option>
+                                            <option value="12" >12 cm</option>
+                                            <option value="16" >16 cm</option>
+
+                                        </SELECT>
+                                        <input type="button" id="addSize" value="Add Size" onclick="addMultipleBarcodes()" class="Button"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td> <td><div id="barcodeList" class="internal" style="position:relative"><div class="fillDiv">
+                                                <table id="barcodeTable">
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+
+                                            </div></div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>Image Type</td>
+                                    <td>
+                                        <SELECT name="imageType" id="imageType" style="width:137">
+                                            <option value="1" selected>JPG</option>
+                                            <option value="2" >GIF</option>
+                                            <option value="3" >PNG</option>
+                                            <option value="4" >EPS</option>
+
+                                        </SELECT>
+                                    </td>
+                                </tr>
+
+                                <tr><td>Error correction</td>
+                                    <td>
+                                        <SELECT name="error" id = "errorCorrection"  style="width:137">
+                                            <option value="L" selected>Low</option>
+                                            <option value="M" >Medium</option>
+                                            <option value="H" >High</option>
+                                            <option value="Q" >Quality</option>
+                                        </SELECT>
+                                    </td></tr>
+                                <tr><td>Title (Optional) </td><td><input type="text" id="titleText" /></td></tr>
+                                <tr><td></td><td>
+                                        <input type="button" id="generateBarcode" value="Generate" onclick="submitBarcodeParamsLogged('<%=userName%>','<%=userAccessLevel%>','<%=ipAddress%>')" class="Button"/>
+                                        <input type="button" id="startOver" value="Start Over" onclick="startOverLogged()" class="Button"/>
+
+                                    </td></tr>
+
+                                <tr><td colspan="2" >
+                                        <div id="response" class="fillDiv" style="color: crimson;text-decoration: blink">
+
+                                        </div>
+
+                                    </td></tr>
+                            </table>
+                            <hr>
+
+                            <table style="width:400px;">
+
+                                <tr><td></td><td>
+                                        <div id="form" style="width:600px;">
+
+
+                                            <fieldset>
+                                                <legend>Your Barcode</legend>
+                                                <div id="imageContainer"><div class="fillDiv">
+
+                                                        <table width="100%"><tr><td>
+                                                                    <table id="imageTable"><tr id="imageLine1"></tr>
+
+                                                                    </table>
+                                                                </td></tr>
+
+                                                            <tr><td></td><td align="right">
+
+                                                                    <input type="button" id="getZip" value="Get Zip" disabled onclick="downloadArchives()" class="Button"/>
+
+                                                                </td></tr></table>
+                                                    </div></div>
+                                            </fieldset>
+
+                                        </div>
+                                    </td></tr>
+
+                            </table>
+
+                        </div>
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End panes -->
+  
+  <p class="Copyright">&copy; Dialog Axiata PLC. All Rights Reserved.</p>
+</div>
+<!-- End wrapper -->
+</body>
+</html>

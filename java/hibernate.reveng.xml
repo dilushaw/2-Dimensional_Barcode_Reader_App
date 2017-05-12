@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="barcodeapplication"/>
+  <table-filter match-name="campaign"/>
+  <table-filter match-name="privileges"/>
+  <table-filter match-name="barcode_data"/>
+  <table-filter match-name="user_action"/>
+  <table-filter match-name="user_privileges"/>
+  <table-filter match-name="url_hit_time"/>
+  <table-filter match-name="user_logs"/>
+  <table-filter match-name="role_privilege"/>
+  <table-filter match-name="user_size"/>
+  <table-filter match-name="role"/>
+  <table-filter match-name="sizes"/>
+  <table-filter match-name="lob_group"/>
+  <table-filter match-name="user_campaign"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="corporate"/>
+  <table-filter match-name="barcode_category_jasper"/>
+  <table-filter match-name="barcode"/>
+  <table-filter match-name="url_hit_count"/>
+</hibernate-reverse-engineering>

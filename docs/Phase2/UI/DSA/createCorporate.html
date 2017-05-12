@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Vertebrate  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100423
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/tabs.css" />
+<link href="css/dsa_style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="HeaderTopLinks">
+  User: dewmini&nbsp;|&nbsp;Account: dialoglab&nbsp;|&nbsp;<a href="#">Logout</a>&nbsp;  </div>
+
+    <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <h2 id="BarcodeLogo">Barcode</h2>
+  </div>
+  <!--#End Logos-->
+  
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  <!--End HeaderBar-->
+</div> <!--End header-->
+  <!-- Displaying the tabs menu-->
+  <div class="fillDiv">
+    <ul class="tabs">
+      <li><a href="dashboard.html">Corporate</a></li>
+      <li><a href="#">Reports</a></li>
+    </ul>
+  </div>
+  <!-- end fillDiv (tabs menu) -->
+  <div class="panes" style="border: 1px solid #999;border-top: 0;padding:0px 0px">
+    <div id="Content" class="Content">
+      <table width="80%" border="0" align="center">
+        <tr>
+          <td colspan="3"><p>You are here : Corporate&gt; Create Corporate</p></td>
+        </tr>
+        <tr>
+          <td colspan="3"><hr /></td>
+        </tr>
+        <tr>
+          <td width="25%"><div align="left"><strong>Corporate Name</strong></div>
+              <div class="star">*</div></td>
+          <td width="4%"><div align="center"><strong>:</strong></div></td>
+          <td width="71%" align="left"><label>
+            <input name="textCorporateName" type="text" id="textCorporateName" size="65" maxlength="15" />
+          </label></td>
+        </tr>
+        <tr>
+          <td><p><strong>Description</strong></p></td>
+          <td><div align="center"><strong>:</strong></div></td>
+          <td align="left"><label>
+            <textarea name="textCorporateDescription" cols="49" rows="2" id="textCorporateDescription"></textarea>
+          </label></td>
+        </tr>
+        <tr>
+          <td><strong>Status*</strong></td>
+          <td><div align="center"><strong>:</strong></div></td>
+          <td align="left"><label> </label>
+              <p>
+                <label></label>
+                <label></label>
+              </p>
+            <table width="200" align="left">
+                <tr>
+                  <td valign="top"><label>
+                    <input name="RadioGroupEnableDisableCorporate" type="radio" id="RadioGroupEnableDisableCorporate_0" value="radio" checked="checked" />
+                    Enable</label></td>
+                </tr>
+                <tr>
+                  <td valign="top"><label>
+                    <input type="radio" name="RadioGroupEnableDisableCorporate" value="radio" id="RadioGroupEnableDisableCorporate_1" />
+                    Disable</label></td>
+                </tr>
+              </table>
+            <label></label></td>
+        </tr>
+        <tr>
+          <td><strong>Company Name*</strong></td>
+          <td><div align="center"><strong>:</strong></div></td>
+          <td align="left"><label>
+            <input name="textCompanyName" type="text" id="textCompanyName" size="65" maxlength="40" />
+          </label></td>
+        </tr>
+        <tr>
+          <td><strong>Phone Number*</strong></td>
+          <td><div align="center"><strong>:</strong></div></td>
+          <td align="left"><label>
+            <input name="textPhoneNumber" type="text" id="textPhoneNumber" size="65" maxlength="10" />
+          </label></td>
+        </tr>
+        <tr>
+          <td><strong>E-mail*</strong></td>
+          <td><div align="center"><strong>:</strong></div></td>
+          <td align="left"><label>
+            <input name="textEmail" type="text" id="textEmail" size="65" maxlength="40" />
+          </label></td>
+        </tr>
+        <tr>
+          <td colspan="3"><hr &nbsp/></td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong>Privileges</strong></td>
+        </tr>
+        <tr>
+          <td colspan="3"><label>
+            <input name="checkboxManageUserGroups" type="checkbox" id="checkboxManageUserGroups" checked="checked" />
+            </label>
+            Manage User Groups</td>
+        </tr>
+        <tr>
+          <td colspan="3"><label>
+            <input name="checkboxManageUsers" type="checkbox" id="checkboxManageUsers" checked="checked" />
+            </label>
+            Manage Users</td>
+        </tr>
+        <tr>
+          <td colspan="3"><label>
+            <input name="checkboxManageCampaigns" type="checkbox" id="checkboxManageCampaigns" checked="checked" />
+            </label>
+            Manage Campaigns</td>
+        </tr>
+        <tr>
+          <td colspan="3"><label>
+            <input name="checkboxManageBarcodes" type="checkbox" id="checkboxManageBarcodes" checked="checked" />
+            </label>
+            Manage Barcodes</td>
+        </tr>
+        <tr>
+          <td colspan="3"><input type="checkbox" name="checkboxGenerateReports" id="checkboxGenerateReports" />
+          Generate Reports</td>
+        </tr>
+        <tr>
+          <td colspan="3"><label><hr /></label></td>
+        </tr>
+        <tr>
+          <td colspan="3"><label>
+            <input type="reset" name="buttonReset" id="buttonReset" value="Reset" class="button"/>
+            <input type="submit" name="buttonSave" id="buttonSave" value="Save" class="button"/>
+          </label></td>
+        </tr>
+      </table>
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End panes -->
+  <p class="Copyright">&copy; Dialog Axiata PLC. All Rights Reserved.</p>
+</div>
+<!-- End wrapper -->
+</body>
+
+</html>

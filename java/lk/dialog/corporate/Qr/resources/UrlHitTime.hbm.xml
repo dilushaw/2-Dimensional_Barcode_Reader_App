@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 1, 2012 1:27:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="lk.dialog.corporate.Qr.data.UrlHitTime" table="url_hit_time" catalog="barcodeapplication">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="realUrl" type="string">
+            <column name="real_url" length="2000" />
+        </property>
+        <property name="hitTime" type="timestamp">
+            <column name="hit_time" length="19" />
+        </property>
+        <many-to-one class="lk.dialog.corporate.Qr.data.Barcode" fetch="select" name="barcode">
+            <column length="25" name="barcode_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

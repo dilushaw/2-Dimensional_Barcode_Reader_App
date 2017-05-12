@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.LobGroup" table="lob_group">
+        <id name="lobId" type="java.lang.Integer">
+            <column name="lob_id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="lk.dialog.corporate.Qr.data.Corporate" fetch="select" name="corporate">
+            <column name="corporate_id" not-null="true"/>
+        </many-to-one>
+        <property name="lobName" type="string">
+            <column length="50" name="lob_name" not-null="true"/>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="created_user_id" not-null="true"/>
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column name="date_created" length="19" not-null="true" />
+        </property>
+        <set inverse="true" name="users">
+            <key>
+                <column name="lob_id"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.User"/>
+        </set>
+        <set inverse="true" name="campaigns">
+            <key>
+                <column name="lob_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.Campaign"/>
+        </set>
+    </class>
+</hibernate-mapping>

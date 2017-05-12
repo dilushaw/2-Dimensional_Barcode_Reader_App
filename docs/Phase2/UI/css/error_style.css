@@ -1,0 +1,122 @@
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#707070;
+}
+#wrapper {
+	width:760px;
+	overflow:hidden;
+	_height:100%;
+	margin:auto;
+}
+/* Logo */
+#header{
+	width:760px;
+	margin-top:0px;
+}
+
+
+#Logos {
+	margin:20px 0;
+	height:79px;
+}
+#Logos #Dialog {
+	background:url(../images/bks.jpg) no-repeat left top;
+	width:130px;
+	padding-top:79px;
+	float:left;
+}
+
+.HeaderBar {
+	border-bottom: 1px solid silver;
+}
+
+
+#Content {
+	/*background:url(../images/ash-mid.jpg) repeat-y;*/
+	background:#ffffff;
+	overflow:hidden;
+	margin-top:2px;
+	position:relative;
+	text-align:center;
+}
+
+
+#Content .button {
+    background-image: url("../images/buttonBG.jpg");
+    border: 1px solid #003C74;
+    color: #333333;.
+    font: bold 12px Arial;
+    padding: 2px 0;
+}
+
+.Button {
+	background:url(../images/but-bk.jpg) repeat-x;
+	height:26px;
+	color:#fff;
+	border:none;
+	border-left:8px solid #FFC124;
+	padding:0 10px;
+	cursor:pointer;
+	font-size:15px;
+}
+.Button:hover {
+	background:url(../images/but-bk-over.jpg) repeat-x;
+	height:26px;
+}
+.Copyright {
+	margin:10px 0;
+	float:right;
+	font-size:11px;
+}
+
+#Logos #Dialog{
+	overflow:hidden;
+	height:0;
+	display:block;
+}
+h1, h2, h3, ul {
+	margin:0;
+	padding:0;
+}
+h3 {
+	font-size:15px;
+}
+
+
+table {
+	border-collapse:collapse;
+}
+table td {
+	padding:8px 0;
+}
+a {
+	color:#ED1C24;
+	text-decoration:none;
+}
+a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+
+
+ul.a {
+list-style-type:circle;
+
+}
+ul.b {list-style-type:square;}
+
+.clear {
+	clear:both;
+}
+
+#footer {
+	width: 760px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	border-top: 1px solid #999;
+	font-family: Arial, Helvetica, sans-serif;
+}

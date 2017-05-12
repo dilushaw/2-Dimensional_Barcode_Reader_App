@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.Barcode" table="barcode">
+    <id name="barcodeId" type="string">
+      <column length="25" name="barcode_id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="lk.dialog.corporate.Qr.data.User" fetch="select" name="user">
+      <column name="user_id" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="lk.dialog.corporate.Qr.data.Campaign" fetch="select" name="campaign">
+      <column name="campaign_id"/>
+    </many-to-one>
+    <many-to-one class="lk.dialog.corporate.Qr.data.Sizes" fetch="select" name="sizes">
+      <column length="25" name="size_id" not-null="true"/>
+    </many-to-one>
+    <property name="dateCreated" type="timestamp">
+      <column length="19" name="date_created" not-null="true"/>
+    </property>
+    <property name="type" type="string">
+      <column length="20" name="type" not-null="true"/>
+    </property>
+    <property name="bcActionId" type="string">
+      <column length="20" name="bc_action_id" not-null="true"/>
+    </property>
+    <property name="imgeType" type="string">
+      <column length="20" name="imge_type" not-null="true"/>
+    </property>
+    <property name="errorCorrectionLevel" type="string">
+      <column length="20" name="error_correction_level" not-null="true"/>
+    </property>
+    <property name="expDate" type="timestamp">
+      <column length="19" name="exp_date" not-null="true"/>
+    </property>
+    <property name="title" type="string">
+      <column length="50" name="title"/>
+    </property>
+    <property name="codeName" type="string">
+      <column length="50" name="code_name"/>
+    </property>
+    <set inverse="true" name="barcodeDatas">
+      <key>
+        <column length="25" name="barcode_id" not-null="true"/>
+      </key>
+      <one-to-many class="lk.dialog.corporate.Qr.data.BarcodeData"/>
+    </set>
+        <set name="urlHitCounts" inverse="true">
+            <key>
+                <column name="barcode_id" length="25" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UrlHitCount" />
+        </set>
+        <set name="urlHitTimes" inverse="true">
+            <key>
+                <column name="barcode_id" length="25" />
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UrlHitTime" />
+        </set>
+  </class>
+</hibernate-mapping>

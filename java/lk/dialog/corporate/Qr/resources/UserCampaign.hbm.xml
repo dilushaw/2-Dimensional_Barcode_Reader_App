@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.UserCampaign" table="user_campaign">
+    <id name="userCampaignId" type="java.lang.Integer">
+      <column name="user_campaign_id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="lk.dialog.corporate.Qr.data.User" fetch="select" name="user">
+      <column name="user_id" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="lk.dialog.corporate.Qr.data.Campaign" fetch="select" name="campaign">
+      <column name="campaign_id" not-null="true"/>
+    </many-to-one>
+    <property name="owner" type="int">
+      <column name="owner" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

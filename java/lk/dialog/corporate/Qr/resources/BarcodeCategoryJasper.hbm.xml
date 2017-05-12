@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.BarcodeCategoryJasper" table="barcode_category_jasper">
+    <id name="category" type="string">
+      <column length="20" name="category"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="quentity" type="int">
+      <column name="quentity" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

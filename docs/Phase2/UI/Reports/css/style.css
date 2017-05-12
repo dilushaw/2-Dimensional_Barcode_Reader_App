@@ -1,0 +1,230 @@
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#707070;
+}
+#wrapper {
+	width:1060px;
+	overflow:hidden;
+	_height:100%;
+	margin:auto;
+}
+/* Logo */
+#header{
+	width:1060pf;
+	margin-top:0px;
+}
+#HeaderTopLinks {
+    color: #404040;
+    font-size: 11px;
+	display:block;
+
+    /*set the div in the top right corner
+    position:absolute;
+    top:0;
+    right:0;
+	float:right;
+	width:560px;*/
+	width:800px;
+    position:relative;
+    text-align: right;
+    vertical-align: top;
+	float:right;
+}
+
+#Logos {
+	margin:20px 0;
+	height:79px;
+}
+#Logos #Dialog {
+	background:url(../../images/bks.jpg) no-repeat left top;
+	width:130px;
+	padding-top:79px;
+	float:left;
+}
+#Logos #BarcodeLogo {
+	background:url(../../images/bks.jpg) no-repeat left -82px;
+	width:242px;
+	padding-top:21px;
+	float:right;
+	margin-top:40px;
+	margin-left:400px;
+}
+.HeaderBar {
+	background:url(../../images/top-mid-bk.jpg) repeat-x;
+	height:33px;
+}
+.HeaderBar .Right {
+	background:url(../../images/top-right.jpg) no-repeat;
+	width:132px;
+	height:33px;
+	float:right;
+}
+
+
+.panes div {
+	/*  display:none;
+                  padding:15px 10px;
+                  border:1px solid #999;
+                  border-top:0;
+                  height:100px;*/
+                font-size:14px;
+	background-color:#fff;
+}
+#Content {
+	/*background:url(../../images/ash-mid.jpg) repeat-y;*/
+	background:#ffffff;
+	overflow:hidden;
+	margin-top:2px;
+	position:relative;
+}
+
+
+#Content .button {
+    background-image: url("../../images/buttonBG.jpg");
+    border: 1px solid #003C74;
+    color: #333333;.
+    font: bold 12px Arial;
+    padding: 2px 0;
+}
+#Content .Top {
+	background:url(../../images/ash-top.jpg) no-repeat;
+	width:1060pf;
+	height:18px;
+	font-size:12px;
+	padding:2px;
+	margin:0;
+}
+#Content .Mid {
+	background:url(../../images/ash-bot.jpg) no-repeat left bottom;
+	padding:10px 30px 18px 30px;
+	overflow:hidden;
+}
+#Content .Mid h3.CreateBarcode {
+	background:url(../../images/bks.jpg) no-repeat left -106px;
+	width:188px;
+	padding-top:19px;
+}
+#Content .Mid h3.BarcodeManage {
+	background:url(../../images/bks.jpg) no-repeat left -127px;
+	width:341px;
+	padding-top:23px;
+}
+.fillDiv {
+	/*background:url(../../images/filldiv-ash-mid.jpg) repeat;*/
+	
+	overflow:hidden;
+	margin-top:2px;
+	position:relative;
+	width: auto;
+	height: auto
+}
+.Text, .select, .selectS {
+	border:1px solid #CFCFD1;
+	padding:5px;
+	width:245px;
+}
+.select {
+	width:257px;
+}
+.selectS {
+	width:80px;
+}
+fieldset {
+	border:1px solid #CFCFD1;
+	font-weight:700;
+	width:300px;
+	float:left;
+	padding:10px;
+}
+fieldset img {
+	margin:auto;
+	display:block;
+}
+
+
+a.Help {
+	background:url(../../images/bks.jpg) no-repeat -135px top;
+	width:20px;
+	padding-top:22px;
+	float:right;
+	margin-right:30px;
+}
+a.Download {
+	background:url(../../images/bks.jpg) no-repeat -158px top;
+	width:59px;
+	padding-top:70px;
+	float:left;
+	margin:90px 0 0 20px;
+}
+.Button {
+	background:url(../../images/but-bk.jpg) repeat-x;
+	height:26px;
+	color:#fff;
+	border:none;
+	border-left:8px solid #FFC124;
+	padding:0 10px;
+	cursor:pointer;
+	font-size:15px;
+}
+.Button:hover {
+	background:url(../../images/but-bk-over.jpg) repeat-x;
+	height:26px;
+}
+.Copyright {
+	margin:10px 0;
+	float:right;
+	font-size:11px;
+}
+
+#Logos #Dialog, #Logos #BarcodeLogo, #Content .Mid h3.CreateBarcode, a.Help, a.Download, #Content .Mid h3.BarcodeManage{
+	overflow:hidden;
+	height:0;
+	display:block;
+}
+h1, h2, h3, ul {
+	margin:0;
+	padding:0;
+}
+h3 {
+	font-size:15px;
+}
+ul {
+	list-style:none;
+}
+hr {
+	background:url(../../images/line-break.jpg) no-repeat;
+	border:none;
+	width:830px;
+	margin:5px auto;/* prev:margin:20px auto */
+	border-top:1px solid #ccc\9;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+}
+table td {
+	padding:8px 0;
+}
+a {
+	color:#ED1C24;
+	text-decoration:none;
+}
+a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+.clear {
+	clear:both;
+}
+
+#footer {
+	width: 1060pf;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	border-top: 1px solid #999;
+	font-family: Arial, Helvetica, sans-serif;
+}

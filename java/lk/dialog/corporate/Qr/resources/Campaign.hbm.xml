@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.Campaign" table="campaign">
+        <id name="campaignId" type="java.lang.Integer">
+            <column name="campaign_id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="lk.dialog.corporate.Qr.data.LobGroup" fetch="select" name="lobGroup">
+            <column name="lob_id" not-null="true"/>
+        </many-to-one>
+        <property name="campaignName" type="string">
+            <column length="50" name="campaign_name" not-null="true"/>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column length="19" name="start_date" not-null="true"/>
+        </property>
+        <property name="expireDate" type="timestamp">
+            <column length="19" name="expire_date" not-null="true"/>
+        </property>
+        <property name="campaignStatus" type="int">
+            <column name="campaign_status" not-null="true"/>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="created_user_id"/>
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column length="19" name="date_created"/>
+        </property>
+        <set inverse="true" name="barcodes">
+            <key>
+                <column name="campaign_id"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.Barcode"/>
+        </set>
+        <set inverse="true" name="userCampaigns">
+            <key>
+                <column name="campaign_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UserCampaign"/>
+        </set>
+    </class>
+</hibernate-mapping>

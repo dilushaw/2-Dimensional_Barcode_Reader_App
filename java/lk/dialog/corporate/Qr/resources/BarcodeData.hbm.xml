@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.BarcodeData" table="barcode_data">
+    <id name="id" type="string">
+      <column length="25" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="lk.dialog.corporate.Qr.data.Barcode" fetch="select" name="barcode">
+      <column length="25" name="barcode_id" not-null="true"/>
+    </many-to-one>
+    <property name="attribute" type="string">
+      <column length="20" name="attribute" not-null="true"/>
+    </property>
+    <property name="value" type="string">
+      <column length="2000" name="value" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

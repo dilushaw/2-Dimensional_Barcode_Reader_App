@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/content_style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+<link href="css/report_style.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css"> 
+@charset "utf-8";
+/* CSS Document */
+#Content h2,h3{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-weight:bold;;
+	padding:5px;
+}
+#Content p{
+	font-size:12px;
+	padding:2px;
+	margin:0;
+}
+#Content h2{
+	font-size:15px;
+	padding:8px;
+	color:#333333;
+}
+#Content h3{
+	font-size:12px;
+	padding:5px;
+}
+#reports
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin-top: 15px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#reports th
+{
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 2px;
+	background:#CC0000;
+	color: #fff;
+	border-right:#CCCCCC 1px solid;
+	border-bottom:#CCCCCC 1px solid;
+}
+#reports td
+{
+	padding: 4px;
+	color: #669;
+	border: 1px solid silver;
+}
+#reports .odd
+{
+	background: #F5F5F5; 
+}
+
+#reports tbody tr:hover td
+{
+	color: #660000;
+	background: #FFFFCC;
+}
+
+#tableSearch{
+	background-color:#999999;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px;
+}
+
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#707070;
+}
+#wrapper {
+	width:1060px;
+	overflow:hidden;
+	_height:100%;
+	margin:auto;
+}
+/* Logo */
+#header{
+	width:1060pf;
+	margin-top:0px;
+}
+#HeaderTopLinks {
+    color: #404040;
+    font-size: 11px;
+	display:block;
+
+    /*set the div in the top right corner
+    position:absolute;
+    top:0;
+    right:0;
+	float:right;
+	width:560px;*/
+	width:800px;
+    position:relative;
+    text-align: right;
+    vertical-align: top;
+	float:right;
+}
+
+#Logos {
+	margin:20px 0;
+	height:79px;
+}
+#Logos #Dialog {
+	background:url(../images/bks.jpg) no-repeat left top;
+	width:130px;
+	padding-top:79px;
+	float:left;
+}
+#Logos #BarcodeLogo {
+	background:url(../images/bks.jpg) no-repeat left -82px;
+	width:242px;
+	padding-top:21px;
+	float:right;
+	margin-top:40px;
+	margin-left:400px;
+}
+.HeaderBar {
+	background:url(../images/top-mid-bk.jpg) repeat-x;
+	height:33px;
+}
+.HeaderBar .Right {
+	background:url(../images/top-right.jpg) no-repeat;
+	width:132px;
+	height:33px;
+	float:right;
+}
+
+
+.panes div {
+	/*  display:none;
+                  padding:15px 10px;
+                  border:1px solid #999;
+                  border-top:0;
+                  height:100px;*/
+                font-size:14px;
+	background-color:#ffffff;
+}
+#Content {
+	/*background:url(../images/ash-mid.jpg) repeat-y;*/
+	background:#ffffff;
+	overflow:hidden;
+	margin-top:2px;
+	position:relative;
+}
+
+
+#Content .button {
+    background-image: url("../images/buttonBG.jpg");
+    border: 1px solid #003C74;
+    color: #333333;.
+    font: bold 12px Arial;
+    padding: 2px 0;
+}
+#Content .Top {
+	background:url(../images/ash-top.jpg) no-repeat;
+	width:1060pf;
+	height:18px;
+	font-size:12px;
+	padding:2px;
+	margin:0;
+}
+#Content .Mid {
+	background:url(../images/ash-bot.jpg) no-repeat left bottom;
+	padding:10px 30px 18px 30px;
+	overflow:hidden;
+}
+#Content .Mid h3.CreateBarcode {
+	background:url(../images/bks.jpg) no-repeat left -106px;
+	width:188px;
+	padding-top:19px;
+}
+#Content .Mid h3.BarcodeManage {
+	background:url(../images/bks.jpg) no-repeat left -127px;
+	width:341px;
+	padding-top:23px;
+}
+.fillDiv {
+	/*background:url(../images/filldiv-ash-mid.jpg) repeat;*/
+	
+	overflow:hidden;
+	margin-top:2px;
+	position:relative;
+	width: auto;
+	height: auto
+}
+.Text, .select, .selectS {
+	border:1px solid #CFCFD1;
+	padding:5px;
+	width:245px;
+}
+.select {
+	width:257px;
+}
+.selectS {
+	width:80px;
+}
+fieldset {
+	border:1px solid #CFCFD1;
+	font-weight:700;
+	width:300px;
+	float:left;
+	padding:10px;
+}
+fieldset img {
+	margin:auto;
+	display:block;
+}
+
+
+a.Help {
+	background:url(../images/bks.jpg) no-repeat -135px top;
+	width:20px;
+	padding-top:22px;
+	float:right;
+	margin-right:30px;
+}
+a.Download {
+	background:url(../images/bks.jpg) no-repeat -158px top;
+	width:59px;
+	padding-top:70px;
+	float:left;
+	margin:90px 0 0 20px;
+}
+.Button {
+	background:url(../images/but-bk.jpg) repeat-x;
+	height:26px;
+	color:#fff;
+	border:none;
+	border-left:8px solid #FFC124;
+	padding:0 10px;
+	cursor:pointer;
+	font-size:15px;
+}
+.Button:hover {
+	background:url(../images/but-bk-over.jpg) repeat-x;
+	height:26px;
+}
+.Copyright {
+	margin:10px 0;
+	float:right;
+	font-size:11px;
+}
+
+#Logos #Dialog, #Logos #BarcodeLogo, #Content .Mid h3.CreateBarcode, a.Help, a.Download, #Content .Mid h3.BarcodeManage{
+	overflow:hidden;
+	height:0;
+	display:block;
+}
+h1, h2, h3, ul {
+	margin:0;
+	padding:0;
+}
+h3 {
+	font-size:15px;
+}
+ul {
+	list-style:none;
+}
+hr {
+	background:url(../images/line-break.jpg) no-repeat;
+	border:none;
+	width:830px;
+	margin:5px auto;/* prev:margin:20px auto */
+	border-top:1px solid #ccc\9;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+}
+table td {
+	padding:8px 0;
+}
+a {
+	color:#ED1C24;
+	text-decoration:none;
+}
+a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+.clear {
+	clear:both;
+}
+
+#footer {
+	width: 1060pf;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	border-top: 1px solid #999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+  <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <p style="text-align:right; vertical-align:bottom; font-style:italic; font-weight:bold; font-size:12px">2D Barcode Reader Report on Year 2012</p>
+  </div>
+  <!--#End Logos-->
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  
+  <div class="panes">
+    <div id="Content" class="Content">
+    <h1>&nbsp;</h1>
+      <form action="createCorporate.html">
+        <table id="reports" summary="All Corportaes">
+                <thead>
+                  <tr>
+                    <th colspan="5" scope="col" align="center">Corporate</th>
+                    <th width="91" rowspan="2" scope="col">Campaign Name</th>
+                    <th width="78" rowspan="2" scope="col">Barcode Name</th>
+                    <th width="78" rowspan="2" scope="col">Barcode Action</th>
+                    <th width="57" rowspan="2" scope="col">Hit Count</th>
+                    <th colspan="2" scope="col" align="center">Created By</th>
+                  </tr>
+                  <tr>
+                    <th width="107" scope="col">Name</th>
+                    <th width="90" scope="col">Address</th>
+                    <th width="101" scope="col">Telephone</th>
+                    <th width="90" scope="col">Fax</th>
+                    <th width="120" scope="col">Email</th>
+                    <th width="106" scope="col">User Name</th>
+                    <th width="118" scope="col">Designation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+            </table>
+      </form>
+      <br />
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End panes -->
+</div>
+<!-- End wrapper -->
+<div id="footer">
+  <p class="Copyright">&copy; Dialog-University of Moratuwa Mobile Communications Research Laboratory. All Rights Reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<%-- 
+    Document   : changePasswordNewUser
+    Created on : Sep 13, 2012, 9:15:04 AM
+    Author     : Dilusha
+--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<!DOCTYPE html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Change Password New User</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="resources/scripts/validation.js"></script>
+    </head>
+    
+    <body>
+    <div id="wrapper">
+  <div id="header">
+    
+
+    <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <h2 id="BarcodeLogo">Barcode</h2>
+  </div>
+  <!--#End Logos-->
+  
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  <!--End HeaderBar-->
+</div> <!--End header-->
+
+<div id="Content" class="Content">
+
+        <form:form name="create" commandName="changePasswordNewUser" action="changePasswordNewUser.htm" method="POST">
+            <table width="100%" border="0" align="center">
+              
+                
+              <tr>
+            <td align="left" colspan="4">You need to change your default password before log in to the system&nbsp;</td>
+              </tr>
+                <tr>
+                  <td align="right"><span style="color:red">${errorMessage}</span></td>
+                  <td></td>
+                  <td colspan="2" align="left">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Old Password:</label><font class="req_star">*</font></td>
+                    <td></td>
+                    <td colspan="2" align="left">
+                        <form:password path="oldpassword" />   <form:errors path="oldpassword"/>         </td>
+               </tr>
+              
+              <tr>
+                    <td align="right"><label>New Password:</label><font class="req_star">*</font></td>
+                    <td></td>
+                    <td colspan="2" align="left">
+                        <form:password path="newpassword" />   <form:errors path="newpassword"/>         </td>
+               </tr>
+             
+             <tr>
+                    <td align="right"><label>Retype Password:</label><font class="req_star">*</font></td>
+                    <td></td>
+                    <td colspan="2" align="left">
+                        <form:password path="retypepassword" />   <form:errors path="retypepassword"/>         </td>
+               </tr> 
+               
+   
+             <tr>
+               <td align="center">&nbsp;</td>
+               <td align="center">&nbsp;</td>
+               <td align="center">&nbsp;</td>
+               <td align="center">&nbsp;</td>
+             </tr>
+             <tr>
+               <td align="center">&nbsp;</td>
+               <td align="center">&nbsp;</td>
+               <td width="11%" align="center"><input type="submit" name="buttonSave" id="buttonSave" path="save" value="Change Password" class="Button" onClick="return validatePassword()"/></td>
+               <td width="56%" align="center">&nbsp;</td>
+             </tr>
+             <tr>
+            <td align="center" colspan="4">&nbsp;</td>
+        </tr>
+            </table>
+            
+            
+    </form:form>
+    
+    </div>
+    <!-- End Content -->
+    </div>
+<!-- End wrapper -->
+    </body>
+    
+</html>

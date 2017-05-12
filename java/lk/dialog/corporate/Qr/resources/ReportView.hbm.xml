@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Created Aug 28, 2012 16:08:54 AM by Dewmini -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.ReportView" table="report_view">
+      <id name="viewId" type="java.lang.Integer">
+      <column length="25" name="view_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="corporateId" type="java.lang.Integer">
+      <column length="100" name="corporate_id"/>
+    </property>
+    <property name="lobId" type="string">
+      <column length="10" name="lob_id"/>
+    </property>
+    <property name="campaignId" type="string">
+      <column length="10" name="campaign_id"/>
+    </property>
+    <property name="corporateName" type="string">
+      <column length="100" name="corporate_name"/>
+    </property>
+    <property name="address" type="string">
+      <column length="200" name="address"/>
+    </property>
+    <property name="telephone" type="string">
+      <column length="12" name="telephone"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="12" name="fax"/>
+    </property>
+    <property name="email" type="string">
+      <column length="100" name="email"/>
+    </property>
+    <property name="lobName" type="string">
+      <column length="50" name="lob_name"/>
+    </property>
+    <property name="campaignName" type="string">
+      <column length="50" name="campaign_name"/>
+    </property>
+    <property name="codeName" type="string">
+      <column length="50" name="code_name"/>
+    </property>
+    <property name="hitCount" type="string">
+      <column length="20" name="hit_count"/>
+    </property>
+    <property name="userName" type="string">
+      <column length="20" name="user_name"/>
+    </property>
+    <property name="designation" type="string">
+      <column length="25" name="designation"/>
+    </property>
+    <property name="size" type="string">
+      <column length="11" name="size"/>
+    </property>
+    <property name="dateCreated" type="string">
+      <column length="19" name="date_created"/>
+    </property>
+  </class>
+</hibernate-mapping>

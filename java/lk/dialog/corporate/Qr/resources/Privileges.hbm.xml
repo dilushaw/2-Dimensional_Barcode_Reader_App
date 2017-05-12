@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.Privileges" table="privileges">
+    <id name="privilegeId" type="java.lang.Integer">
+      <column name="privilege_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="privilegeName" type="string">
+      <column length="100" name="privilege_name" not-null="true"/>
+    </property>
+    <property name="key" type="string">
+      <column length="20" name="key" not-null="true" unique="true"/>
+    </property>
+    <set inverse="true" name="userPrivilegeses">
+      <key>
+        <column name="privilege_id" not-null="true"/>
+      </key>
+      <one-to-many class="lk.dialog.corporate.Qr.data.UserPrivileges"/>
+    </set>
+    <set inverse="true" name="rolePrivileges">
+      <key>
+        <column name="privilege_id" not-null="true"/>
+      </key>
+      <one-to-many class="lk.dialog.corporate.Qr.data.RolePrivilege"/>
+    </set>
+  </class>
+</hibernate-mapping>

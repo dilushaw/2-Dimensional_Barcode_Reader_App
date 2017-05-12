@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/tabs.css" />
+<link href="css/ca_style.css" rel="stylesheet" type="text/css" media="screen" />
+
+        
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="HeaderTopLinks">
+  User: keells&nbsp;|&nbsp;Account: keells&nbsp;|&nbsp;<a href="#">Logout</a>&nbsp;  </div>
+
+    <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <h2 id="BarcodeLogo">Barcode</h2>
+  </div>
+  <!--#End Logos-->
+  
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  <!--End HeaderBar-->
+</div> <!--End header-->
+
+  
+  <!-- Displaying the tabs menu-->
+  <div class="fillDiv">
+    <ul class="tabs">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Manage</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="myProfile.html">My Profile</a></li>
+    </ul>
+  </div>
+  <!-- end fillDiv (tabs menu) -->
+  
+  <div class="panes">
+    <div id="Content" class="Content"> 
+    <form action="createCorporate.html">
+    <table width="100%" border="0">
+  <tr>
+    <td width="68%" rowspan="3">
+    <p>You are here : Corporate&gt; Dashboard</p>
+      <h2>Corporate Admin Dashboard</h2>
+      <h3>Number of User Groups: 02</h3>
+      <h3>Number of Users: 05</h3>
+      <h3>Number of Campaigns : 04</h3></td>
+    <td width="32%" valign="top" align="right"><label></label>
+    <input name="input" type="submit"  value="Create New User Group" class="button"/></td>
+  </tr>
+  <tr>
+    <td valign="top" align="right"><label>
+      <input type="submit" name="button" id="button" value="Create New User" class="button" />
+    </label></td>
+  </tr>
+  <tr>
+    <td valign="top" align="right"><label>
+      <input type="submit" name="button2" id="button2" value="Create New Campaign" class="button" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div id="tableSearch">Campaign Name :
+      <select name="select" id="select">
+      <option selected="selected">All</option>
+      <option>Campaign1</option>
+      <option>Campaign2</option>
+      <option>Campaign3</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;Status : <select name="select" id="select">
+      <option selected="selected">Any</option>
+      <option>Active</option>
+      <option>Inactive</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input name="list" type="submit"  value="List Down" class="button"/></div>
+    <table id="corporates" summary="All Corportaes">
+    <thead>
+    	<tr>
+        	<th width="24%" scope="col">Campaign Name</th>
+            <th width="14%" scope="col">Status</th>
+            <th width="18%" scope="col">Exp. Date</th>
+            <th width="15%" scope="col">Scans</th>
+            <th width="23%" scope="col">Codes</th>
+            <th width="6%" scope="col">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr class="odd">
+        	<td>Campaign1</td>
+            <td>Active</td>
+            <td>06-07-2012</td>
+            <td>58</td>
+            <td>20</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr>
+        	<td>Campaign2</td>
+            <td>Active</td>
+            <td>11-02-2013</td>
+            <td>40</td>
+            <td>35</td>
+            <td><a href="editCampaign.html"><img src="../images/view.png" alt="" width="16" height="16" /></a>&nbsp;&nbsp;&nbsp;<a href="editCampaign.html"><img src="../images/edit.png" alt="" width="16" height="16" /></a></td>
+        </tr>
+        <tr class="odd">
+        	<td>Campaign3</td>
+            <td>Inactive</td>
+            <td>16-12-2013</td>
+            <td>10</td>
+            <td>28</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr>
+          <td>Campaign4</td>
+          <td>Active</td>
+          <td>25-11-2012</td>
+          <td>61</td>
+          <td>31</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="odd">
+        	<td>Campaign5</td>
+            <td>Active</td>
+            <td>04-04-2013</td>
+            <td>31</td>
+            <td>27</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+    </tbody>
+</table></td>
+  </tr>
+</table>
+    </form>
+
+    </div>
+    <!-- End Content -->
+    
+  </div>
+  <!-- End panes -->
+  
+</div>
+<div id="footer">
+  <p class="Copyright">&copy; Dialog Axiata PLC. All Rights Reserved.</p>
+
+</div>
+<!-- End wrapper -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 1, 2012 1:27:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="lk.dialog.corporate.Qr.data.UserAction" table="user_action" catalog="barcodeapplication">
+        <id name="actionId" type="int">
+            <column name="action_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="actionName" type="string">
+            <column name="action_name" length="50" />
+        </property>
+        <property name="entityType" type="string">
+            <column name="entity_type" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>

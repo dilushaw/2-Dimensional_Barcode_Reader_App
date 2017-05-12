@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.Corporate" table="corporate">
+        <id name="corporateId" type="java.lang.Integer">
+            <column name="corporate_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="corporateAccount" type="string">
+            <column length="20" name="corporate_account" not-null="true" unique="true"/>
+        </property>
+        <property name="address" type="string">
+            <column length="200" name="address"/>
+        </property>
+        <property name="telephone" type="string">
+            <column length="12" name="telephone" not-null="true"/>
+        </property>
+        <property name="fax" type="string">
+            <column length="12" name="fax"/>
+        </property>
+        <property name="email" type="string">
+            <column length="100" name="email" not-null="true"/>
+        </property>
+        <property name="contactName" type="string">
+            <column length="100" name="contact_name" not-null="true"/>
+        </property>
+        <property name="licenseStartDate" type="timestamp">
+            <column length="19" name="license_start_date" not-null="true"/>
+        </property>
+        <property name="licenseEndDate" type="timestamp">
+            <column length="19" name="license_end_date" not-null="true"/>
+        </property>
+        <property name="corporateName" type="string">
+            <column length="100" name="corporate_name" not-null="true"/>
+        </property>
+        <property name="corporateStatus" type="int">
+            <column name="corporate_status" not-null="true"/>
+        </property>
+        <property name="description" type="string">
+            <column length="200" name="description"/>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="created_user_id"/>
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column length="19" name="date_created"/>
+        </property>
+        <set inverse="true" name="users">
+            <key>
+                <column name="corporate_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.User"/>
+        </set>
+        <set inverse="true" name="lobGroups">
+            <key>
+                <column name="corporate_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.LobGroup"/>
+        </set>
+    </class>
+</hibernate-mapping>

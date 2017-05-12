@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="455"/>
+	<property name="ireport.y" value="48"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<field name="corporateName" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="telephone" class="java.lang.String"/>
+	<field name="fax" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="lobName" class="java.lang.String"/>
+	<field name="campaignName" class="java.lang.String"/>
+	<field name="codeName" class="java.lang.String"/>
+	<field name="hitCount" class="java.lang.String"/>
+	<field name="userName" class="java.lang.String"/>
+	<field name="designation" class="java.lang.String"/>
+	<field name="size" class="java.lang.String"/>
+	<field name="dateCreated" class="java.lang.String"/>
+	<group name="corporateName">
+		<groupExpression><![CDATA[$F{corporateName}]]></groupExpression>
+		<groupHeader>
+			<band height="61">
+				<textField>
+					<reportElement style="SubTitle" x="28" y="3" width="506" height="17" forecolor="#CC0000"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{corporateName}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="8" y="6" width="13" height="12" forecolor="#999999" backcolor="#999999"/>
+				</rectangle>
+				<textField>
+					<reportElement style="Detail" x="0" y="25" width="197" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="215" y="25" width="85" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{telephone}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="330" y="25" width="88" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fax}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="449" y="25" width="101" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="197" y="25" width="18" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[TP:
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="303" y="25" width="27" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Fax:
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="41" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="45" width="553" height="14" forecolor="#CC0000" backcolor="#CC0000"/>
+				</rectangle>
+				<staticText>
+					<reportElement style="Column header" x="410" y="45" width="76" height="15" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Designation
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="330" y="45" width="72" height="15" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[User
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="115" y="45" width="79" height="15" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Code Name
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="197" y="45" width="29" height="15" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Size
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="236" y="45" width="92" height="15" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Date Created
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="496" y="45" width="55" height="15" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Hit Count
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="45" width="112" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+					<textElement>
+						<font size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Campaign Name
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="418" y="25" width="31" height="15"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Email:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="17">
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="4" width="555" height="1" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+					<graphicElement>
+						<pen lineWidth="1.75" lineColor="#CC0000"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="lobName">
+		<groupExpression><![CDATA[$F{lobName} != null ? $F{lobName} : "No LOBs"]]></groupExpression>
+		<groupHeader>
+			<band height="19">
+				<textField>
+					<reportElement style="SubTitle" x="85" y="2" width="203" height="15" forecolor="#2759A8"/>
+					<textElement>
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lobName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="8" y="2" width="77" height="15" forecolor="#2F1269" backcolor="#FFFFFF"/>
+					<textElement>
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[LOB Name :
+                    ]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="74" splitType="Stretch">
+			<image scaleImage="RetainShape">
+				<reportElement x="0" y="8" width="250" height="54"/>
+				<imageExpression><![CDATA["dialog_logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="136" y="4" width="263" height="33" forecolor="#666666"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Dialog Axiata PLC
+                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="136" y="37" width="313" height="22"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[2D Barcode - Corporate Summary
+                ]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="64" width="555" height="1" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="2.5" lineColor="#CC0000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="66" width="555" height="1" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineColor="#FFCC00"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="1" width="112" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{campaignName} != null ? $F{campaignName} : "No Campaigns"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="115" y="1" width="79" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codeName} != null ? $F{codeName} : "-"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="197" y="1" width="29" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{size} != null ? $F{size} : "-"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="236" y="1" width="92" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateCreated} != null ? $F{dateCreated} : "-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="410" y="0" width="76" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation} != null ? $F{designation} : "-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="330" y="1" width="72" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userName} != null ? $F{userName} : "-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="495" y="0" width="55" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hitCount} != null ? $F{hitCount} : "-"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="15"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="15"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

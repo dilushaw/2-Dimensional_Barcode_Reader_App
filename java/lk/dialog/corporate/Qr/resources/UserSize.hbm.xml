@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.UserSize" table="user_size">
+    <id name="id" type="string">
+      <column length="25" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="lk.dialog.corporate.Qr.data.User" fetch="select" name="user">
+      <column name="user_id" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="lk.dialog.corporate.Qr.data.Sizes" fetch="select" name="sizes">
+      <column length="25" name="size_id" not-null="true"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="../css/content_style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="../css/tabs.css" />
+<link href="css/dsa_style.css" rel="stylesheet" type="text/css" media="screen" />
+
+        
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="HeaderTopLinks">
+  User: dewmini&nbsp;|&nbsp;Account: dialoglab&nbsp;|&nbsp;<a href="#">Logout</a>&nbsp;  </div>
+
+    <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <h2 id="BarcodeLogo">Barcode</h2>
+  </div>
+  <!--#End Logos-->
+  
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  <!--End HeaderBar-->
+</div> <!--End header-->
+
+  
+  <!-- Displaying the tabs menu-->
+  <div class="fillDiv">
+    <ul class="tabs">
+      <li><a href="dashboard.html">Corporates</a></li>
+      <li><a href="#">Reports</a></li>
+    </ul>
+  </div>
+  <!-- end fillDiv (tabs menu) -->
+  
+  <div class="panes">
+    <div id="Content" class="Content"> 
+    <form action="createCorporate.html">
+    <table width="100%" border="0">
+  <tr>
+    <td width="68%">
+    <p>You are here : Corporate> Dashboard</p>
+      <h2>Dialog Super Admin Dashboard</h2>
+      <h3>Total Registered Corporates  : 05</h3>
+      <h3>Active Corporates : 04</h3></td>
+    <td width="32%" valign="top" align="right"><input name="input" type="submit"  value="Create New Corporate" class="button"/></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div id="tableSearch">Corporate Name :
+      <select name="select" id="select">
+      <option>All</option>
+      <option>ODEL</option>
+      <option>Hatton National Bank</option>
+      <option>hhdsf</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;Status : <select name="select" id="select">
+      <option>Any</option>
+      <option>Active</option>
+      <option>Disabled</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input name="list" type="submit"  value="Filter" class="button"/></div>
+    <table id="corporates" summary="All Corportaes">
+    <thead>
+    	<tr>
+        	<th width="24%" scope="col">Corporate Name</th>
+            <th width="14%" scope="col">Status</th>
+            <th width="18%" scope="col">Registered</th>
+            <th width="15%" scope="col">Contact No</th>
+            <th width="23%" scope="col">Email</th>
+            <th width="6%" scope="col">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr class="odd">
+        	<td>ODEL</td>
+            <td>Active</td>
+            <td>06-06-2012</td>
+            <td>0112645644</td>
+            <td><a href="mailto:odel@info.com" class="emailLink">odel@info.com</a></td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr>
+        	<td>John Keells Holdings</td>
+            <td>Active</td>
+            <td>11-02-2012</td>
+            <td>0112306000</td>
+            <td><a href="mailto:jkh@keells.com" class="emailLink">jkh@keells.com</a></td>
+            <td><a href="viewCorporate.html"><img src="../images/view.png" alt="" width="16" height="16" /></a>&nbsp;&nbsp;&nbsp;<a href="editCorporate.html"><img src="../images/edit.png" alt="" width="16" height="16" /></a></td>
+        </tr>
+        <tr class="odd">
+        	<td>Hatton National Bank</td>
+            <td>Disabled</td>
+            <td>16-12-2011</td>
+            <td>0115435472</td>
+            <td><a href="mailto:htn@info.com" class="emailLink">htn@info.com</a></td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr>
+          <td>Cargills (Ceylon) PLC</td>
+          <td>Active</td>
+          <td>25-11-2010</td>
+          <td>0112735543</td>
+          <td><a href="mailto:cargills@biz.com" class="emailLink">cargills@biz.com</a></td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="odd">
+        	<td>E.A.P. Edirisinghe (Pvt) Ltd</td>
+            <td>Active</td>
+            <td>04-04-2012</td>
+            <td>0154543536</td>
+            <td><a href="mailto:eap_contact@info.com" class="emailLink">eap_contact@info.com</a></td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+    </tbody>
+</table></td>
+  </tr>
+</table></form>
+
+    </div>
+    <!-- End Content -->
+    
+  </div>
+  <!-- End panes -->
+  
+</div><!-- End wrapper -->
+<div id="footer">
+  <p class="Copyright">&copy; Dialog Axiata PLC. All Rights Reserved.</p>
+
+</div>
+
+</body>
+</html>

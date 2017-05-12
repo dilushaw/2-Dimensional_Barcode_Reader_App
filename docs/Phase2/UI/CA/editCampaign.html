@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Name       : Vertebrate  
+Description: A two-column, fixed-width design with dark color scheme.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/tabs.css" />
+<link href="css/ca_style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui-1.8.6.custom.css" />
+<script type="text/javascript" src="js/datetimepicker_css.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript">
+function popupCalenderTo(){
+	$("#enddate").datetimepicker({dateFormat: 'yy-mm-dd',timeFormat: 'hh:mm:ss',showSecond: true});
+	$("#enddate").datetimepicker('show');
+}
+
+function popupCalenderFrom(){
+	$("#startdate").datetimepicker({dateFormat: 'yy-mm-dd',timeFormat: 'hh:mm:ss',showSecond: true});
+	$("#startdate").datetimepicker('show');
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="HeaderTopLinks"> User: dewmini&nbsp;|&nbsp;Account: dialoglab&nbsp;|&nbsp;<a href="#">Logout</a>&nbsp; </div>
+    <div id="Logos">
+      <h1 id="Dialog">Dialog</h1>
+      <h2 id="BarcodeLogo">Barcode</h2>
+    </div>
+    <!--#End Logos-->
+    <div class="HeaderBar">
+      <div class="Right"></div>
+    </div>
+    <!--End HeaderBar-->
+  </div>
+  <!--End header-->
+  <!-- Displaying the tabs menu-->
+  <div class="fillDiv">
+    <ul class="tabs">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Manage</a></li>
+      <li><a href="#">Report</a></li>
+      <li><a href="#">My Profile</a></li>
+    </ul>
+  </div>
+  <!-- end fillDiv (tabs menu) -->
+  <div class="panes" style="border: 1px solid #999;border-top: 0;padding:0px 0px">
+    <div id="Content" class="Content">
+      <table width="80%" border="0" align="center">
+        <tr>
+          <td colspan="3"><p>You are here : Manage &gt; Campaign &gt; Create Campaign</p></td>
+        </tr>
+        <tr>
+          <td colspan="3"><div class="page_title"> <span class="title">Create New Campaign</span>
+              <div class="required_fields"><font class="req_star">*</font> required fields</div>
+            </div>
+            <hr /></td>
+        </tr>
+        <tr>
+          <td width="25%" align="right"><label> Campaign Name:</label>
+            <font class="req_star">*</font> </td>
+          <td width="2%">&nbsp;</td>
+          <td width="73%" align="left"><input name="campain" type="text" id="campain" maxlength="15" value="campaign1" disabled="disabled"/></td>
+        </tr>
+        <tr>
+          <td align="right"><label>Line of Business Group:</label>
+            <font class="req_star">*</font></td>
+          <td>&nbsp;</td>
+          <td align="left"><select name="lob" id="lob">
+              <option value="">- Select -</option>
+              <option value="" selected="selected">JK Finance</option>
+              <option value="">Administration</option>
+              <option value="">HR</option>
+              <option value="">Marketing</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td align="right"><label>Start Date:</label>
+            <font class="req_star">* </font></td>
+          <td>&nbsp;</td>
+          <td align="left"><input type="Text" id="startdate" name="startdate" value="2012-07-02 12:03:44">
+            <a > <img src="../images/cal.gif" width="16" height="16" alt="Pick a date" onclick="popupCalenderFrom()"></a></td>
+        </tr>
+        <tr>
+          <td align="right"><label>End Date:</label>
+            <font class="req_star">* </font></td>
+          <td>&nbsp;</td>
+          <td align="left"><input type="Text" id="enddate" name="enddate" value="2014-07-02 18:03:44">
+            <a > <img src="../images/cal.gif" width="16" height="16" alt="Pick a date" onclick="popupCalenderTo()"></a></td>
+        </tr>
+        <tr>
+          <td align="right"><label>Status:</label>
+            <font class="req_star">* </font></td>
+          <td>&nbsp;</td>
+          <td align="left"><input type="radio" name="active" id="active" value="active" checked="checked"/>
+            Active<br />
+            <input type="radio" name="active" id="active" value="disabled" />
+            Disabled </td>
+        </tr>
+        <tr>
+          <td align="right"><label>Comment:</label></td>
+          <td>&nbsp;</td>
+          <td align="left"><label>
+            <textarea name="comment" id="comment" cols="45" rows="5">You can add/edit any comment about the campaign here.</textarea>
+            </label></td>
+        </tr>
+        <tr>
+          <td colspan="3"><label>
+            <hr />
+            </label></td>
+        </tr>
+        <tr align="center">
+          <td colspan="3"><input type="reset" name="buttonReset" id="buttonReset" value="Reset" class="button"/>
+            <input type="submit" name="buttonSave" id="buttonSave" value="Save" class="button"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End panes -->
+  <p class="Copyright">&copy; Dialog Axiata PLC. All Rights Reserved.</p>
+</div>
+<!-- End wrapper -->
+</body>
+</html>

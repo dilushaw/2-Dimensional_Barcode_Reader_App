@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Barcode Generator</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="../css/content_style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="../css/menu.css" />
+<link href="css/ca_style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">  
+       /* $(document).ready(function(){
+            $("#corporates tr:odd").addClass("odd");
+            $("#corporates tr:not(.odd)").hide();
+            $("#corporates tr:first-child").show();
+            
+            $("#corporates tr.odd").click(function(){
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            //$("#report").jExpand();
+        });*/
+		
+		$(function() {
+	$('tr.parent')
+		.css("cursor","pointer")
+		.attr("title","Click to expand/collapse")
+		.click(function(){
+			$(this).siblings('.child-'+this.id).toggle();
+			$(this).find(".arrow").toggleClass("up");
+		});
+	$('tr[@class^=child-]').hide().children('td');
+});
+
+//$('#lob_table').find('tr:even').css({'background-color':'red'})
+ //             .end().find('tr:odd').css({'background-color':'blue'});
+
+    </script>    
+        
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="HeaderTopLinks">
+  User: keells&nbsp;|&nbsp;Account: keells&nbsp;|&nbsp;<a href="#">Logout</a>&nbsp;  </div>
+
+    <div id="Logos">
+    <h1 id="Dialog">Dialog</h1>
+    <h2 id="BarcodeLogo">Barcode</h2>
+  </div>
+  <!--#End Logos-->
+  
+  <div class="HeaderBar">
+    <div class="Right"></div>
+  </div>
+  <!--End HeaderBar-->
+</div> <!--End header-->
+
+  
+  <!-- Displaying the tabs menu-->
+  <div class="fillDiv">
+    <ul class="tabs">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Manage</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="myProfile.html">My Profile</a></li>
+    </ul>
+  </div>
+  <!-- end fillDiv (tabs menu) -->
+  
+  <div class="panes">
+    <div id="Content" class="Content"> 
+    <form action="createCorporate.html">
+    <table width="100%" border="0">
+  <tr>
+    <td width="68%" rowspan="3">
+    <p>You are here : Corporate&gt; Dashboard</p>
+      <h2>Corporate Admin Dashboard</h2>
+      <h3>Number of User Groups: 02</h3>
+      <h3>Number of Users: 05</h3>
+      <h3>Number of Campaigns : 04</h3></td>
+    <td width="32%" valign="top" align="right"><label></label>
+    <input name="input" type="submit"  value="Create New User Group" class="button"/></td>
+  </tr>
+  <tr>
+    <td valign="top" align="right"><label>
+      <input type="submit" name="button" id="button" value="Create New User" class="button" />
+    </label></td>
+  </tr>
+  <tr>
+    <td valign="top" align="right"><label>
+      <input type="submit" name="button2" id="button2" value="Create New Campaign" class="button" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div id="tableSearch">Campaign Name :
+      <select name="select" id="select">
+      <option selected="selected">All</option>
+      <option>Campaign1</option>
+      <option>Campaign2</option>
+      <option>Campaign3</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;Status : <select name="select" id="select">
+      <option selected="selected">Any</option>
+      <option>Active</option>
+      <option>Inactive</option>
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input name="list" type="submit"  value="List Down" class="button"/></div>
+    <table id="lob_table" summary="All LOBs" width="960px">
+    <thead>
+    	<tr>
+    	  <th width="30" scope="col">&nbsp;</th>
+        	<th width="300" scope="col">Campaign Name</th>
+            <th width="110" scope="col">Status</th>
+            <th width="140" scope="col">Exp. Date</th>
+            <th width="120" scope="col">Scans</th>
+            <th width="70" scope="col">Codes</th>
+            <th width="" scope="col">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr class="parent" id="p1">
+    	  <td><div class="arrow"></div></td>
+        	<td>Line Of Business Group 1</td>
+            <td>Active</td>
+            <td>&nbsp;</td>
+            <td>58</td>
+            <td>20</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="child-p1" style="display: none;" id="child">
+        	<td></td>
+        	<td>Campaign</td>
+            <td>Active</td>
+            <td>&nbsp;</td>
+            <td>10</td>
+            <td>2</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="child-p1" style="display: none;" id="child">
+        	<td></td>
+        	<td>Campaign</td>
+            <td>Active</td>
+            <td>&nbsp;</td>
+            <td>10</td>
+            <td>2</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="child-p1" style="display: none;">
+        <td colspan="7"><table width="100%" border="0" id="campaigns_table" cellpadding="0" cellspacing="0">
+          <tr class="odd">
+            <td width="35">&nbsp;</td>
+                <td width="304">Campaign1</td>
+                <td width="113">Active</td>
+                <td width="144">06-07-2012</td>
+                <td width="124">12</td>
+                <td width="75">1</td>
+                <td width="155"><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+          <tr class="even">
+            <td>&nbsp;</td>
+                <td>Campaign2</td>
+                <td>Disabled</td>
+                <td>22-10-2010</td>
+                <td>222</td>
+                <td>2</td>
+                <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+          <tr class="odd">
+            <td>&nbsp;</td>
+                <td>Campaign3</td>
+                <td>Active</td>
+                <td>06-07-2012</td>
+                <td>34</td>
+                <td>4</td>
+                <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+          <tr class="even">
+            <td>&nbsp;</td>
+                <td bgcolor="#F7ECE0">Campaign4</td>
+                <td>Active</td>
+                <td>06-07-2012</td>
+                <td>55</td>
+                <td>10</td>
+                <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+        </table></td>
+          </tr>
+        <tr class="parent" id="p2">
+          <td><div class="arrow"></div></td>
+        	<td>Line Of Business Group 2</td>
+            <td>Disabled</td>
+            <td>16-12-2013</td>
+            <td>10</td>
+            <td>28</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="child-p2" style="display: none;">
+          <td colspan="7"><table width="100%" border="0" id="campaigns_table" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="30px">&nbsp;</td>
+                <td width="300px">Campaign 2.1</td>
+                <td width="110px">Active</td>
+                <td width="140px">06-07-2012</td>
+                <td width="120px">12</td>
+                <td width="70px">1</td>
+                <td width=""><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+          <tr class="diff">
+            <td>&nbsp;</td>
+                <td>Campaign 22</td>
+                <td>Disabled</td>
+                <td>22-10-2010</td>
+                <td>222</td>
+                <td>2</td>
+                <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+          <tr>
+            <td>&nbsp;</td>
+                <td>Campaign 23</td>
+                <td>Active</td>
+                <td>06-07-2012</td>
+                <td>34</td>
+                <td>4</td>
+                <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+          <tr class="diff">
+            <td>&nbsp;</td>
+            <td bgcolor="#F7ECE0">Campaign 2.4</td>
+            <td>Active</td>
+            <td>26-01-2012</td>
+            <td>4</td>
+            <td>2</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+                <td bgcolor="#F7ECE0">Campaign 2.54</td>
+                <td>Active</td>
+                <td>06-07-2012</td>
+                <td>55</td>
+                <td>10</td>
+                <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+              </tr>
+        </table></td>
+          </tr>
+        <tr class="parent">
+          <td><div class="arrow"></div></td>
+        	<td>Line Of Business Group 3</td>
+            <td>Active</td>
+            <td>04-04-2013</td>
+            <td>0</td>
+            <td>0</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+        <tr class="parent">
+          <td><div class="arrow"></div></td>
+        	<td>Line Of Business Group 4</td>
+            <td>Active</td>
+            <td>04-04-2013</td>
+            <td>0</td>
+            <td>0</td>
+            <td><img src="../images/view.png" alt="" width="16" height="16" />&nbsp;&nbsp;&nbsp;<img src="../images/edit.png" alt="" width="16" height="16" /></td>
+        </tr>
+    </tbody>
+</table></td>
+  </tr>
+</table>
+    </form>
+
+    </div>
+    <!-- End Content -->
+    
+  </div>
+  <!-- End panes -->
+  
+</div>
+<div id="footer">
+  <p class="Copyright">&copy; Dialog Axiata PLC. All Rights Reserved.</p>
+
+</div>
+<!-- End wrapper -->
+</body>
+</html>

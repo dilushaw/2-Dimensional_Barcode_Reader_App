@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 3, 2012 11:08:54 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class catalog="barcodeapplication" name="lk.dialog.corporate.Qr.data.User" table="user">
+        <id name="userId" type="java.lang.Long">
+            <column name="user_id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="lk.dialog.corporate.Qr.data.Role" fetch="select" name="role">
+            <column length="25" name="role_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="lk.dialog.corporate.Qr.data.LobGroup" fetch="select" name="lobGroup">
+            <column name="lob_id"/>
+        </many-to-one>
+        <many-to-one class="lk.dialog.corporate.Qr.data.Corporate" fetch="select" name="corporate">
+            <column name="corporate_id" not-null="true"/>
+        </many-to-one>
+        <property name="userName" type="string">
+            <column length="20" name="user_name" not-null="true"/>
+        </property>
+        <property name="password" type="string">
+            <column length="20" name="password" not-null="true"/>
+        </property>
+        <property name="name" type="string">
+            <column length="100" name="name" not-null="true"/>
+        </property>
+        <property name="mobile" type="string">
+            <column length="12" name="mobile" not-null="true"/>
+        </property>
+        <property name="email" type="string">
+            <column length="100" name="email" not-null="true"/>
+        </property>
+        <property name="description" type="string">
+            <column length="200" name="description"/>
+        </property>
+        <property name="lastLoginDate" type="timestamp">
+            <column length="19" name="last_login_date"/>
+        </property>
+        <property name="userStatus" type="java.lang.Integer">
+            <column name="user_status"/>
+        </property>
+        <property name="designation" type="string">
+            <column length="25" name="designation"/>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="created_user_id"/>
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column length="19" name="date_created"/>
+        </property>
+        <set inverse="true" name="userLogses">
+            <key>
+                <column name="user_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UserLogs"/>
+        </set>
+        <set inverse="true" name="userSizes">
+            <key>
+                <column name="user_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UserSize"/>
+        </set>
+        <set inverse="true" name="barcodes">
+            <key>
+                <column name="user_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.Barcode"/>
+        </set>
+        <set inverse="true" name="userPrivilegeses">
+            <key>
+                <column name="user_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UserPrivileges"/>
+        </set>
+        <set inverse="true" name="userCampaigns">
+            <key>
+                <column name="user_id" not-null="true"/>
+            </key>
+            <one-to-many class="lk.dialog.corporate.Qr.data.UserCampaign"/>
+        </set>
+    </class>
+</hibernate-mapping>
